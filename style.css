@@ -30,8 +30,6 @@ main {
   perspective: 2px;
   overflow-x: hidden;
   overflow-y: auto;
-
-  transition:all 0.5s linear;
 }
 nav {
   position:fixed;
@@ -188,6 +186,7 @@ section#biography h1, section#biography h3 {
 }
 
 ul.work-history {
+  width: 100%;
   list-style: none;
   padding: 0;
   color: #cdcdcd;
@@ -215,4 +214,55 @@ section#contact a{
   background: rgb(211, 59, 83);
   color: #fff;
   border-radius: 2rem;
+}
+
+@media screen and (min-width: 60rem) {
+  main .group {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: top;
+  }
+  section#intro img:first-child {
+    transform: translateZ(-1px) scale(.75);
+  }
+
+  section#intro img:not(:first-child) {
+    z-index: -30;
+  }
+  section#intro img:nth-child(2) {
+    transform: translateZ(.75px) translate(7vw, 16vh) rotate(-6deg) scale(.7);
+  }
+  section#intro img:nth-child(3) {
+    transform: translateZ(-.25px) translate(9vw, -2vh) rotate(4deg) scale(.75);
+  }
+  section#intro img:nth-child(4) {
+    transform: translateZ(.75px) translate(18vw, 21vh) rotate(-10deg) scale(.9);
+    z-index: -10;
+  }
+  section#intro img:nth-child(5) {
+    transform: translateZ(-3px) translate(28vw, 16vh) rotate(8deg) scale(2);
+  }
+
+  section#work {
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: 2rem;
+    height: auto;
+  }
+
+  section#biography {
+    grid-template-columns: 1fr 2fr 1.5fr;
+    grid-gap: 2rem;
+    align-items: top;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+  section#biography h1{
+    margin-top: 0;
+  }
+  section#contact{
+    background: #fcfcfc;
+    min-height: 30vh;
+  }
 }
