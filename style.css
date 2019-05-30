@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ramabhadra&display=swap');
+@keyframes fadeIn {
+  0% {opacity:0; transform: translateY(0em);}
+  1% {opacity:0; transform: translateY(1em);}
+  90% {opacity:1; transform: translateY(-.15em);}
+  100% {opacity:1; transform: translateY(0);}
+}
+@keyframes intro {
+  0% {opacity:0;top:100px;}
+  100% {opacity:1;top:0;}
+}
+html, body {
+  margin: 0; padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 92%;
+  background: #f6e58d;
+}
+main {
+  overflow: visible;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  perspective: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  transition:all 0.5s linear;
+}
+nav {
+  position:fixed;
+  display: flex;
+  flex-direction: row;
+  width:calc(100vw - 4rem);
+  align-items: center;
+  margin: 1rem 2rem;
+  z-index: 100;
+}
+nav ul {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  text-align: right;
+}
+nav li:first-child {
+  flex: 1;
+}
+nav li {
+  margin-left: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+section:not(:first-child):target * {
+  opacity:0 !important;  /* make things invisible upon start */
+  animation:fadeIn ease-in-out 1;
+  animation-fill-mode:forwards;
+  animation-duration:.2s;
+}
+
+section:first-child:target *, section:first-child *{
+  opacity:0 !important;  /* make things invisible upon start */
+  animation:intro ease-out 1;
+  animation-fill-mode:forwards;
+  animation-duration:.6s;
+}
+section#intro img:nth-child(1) {animation-delay:.1s;}
+section#intro img:nth-child(2) {animation-delay:.4s;}
+section#intro img:nth-child(3) {animation-delay:.5s;}
+section#intro img:nth-child(4) {animation-delay:.2s;}
+section#intro img:nth-child(5) {animation-delay:.3s;}
+
+section#intro{
+  align-items: center;
+  justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  z-index: -10;
+  height: 100vh;
+}
+section#intro img {
+  position: relative;
+  width: 100%;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+section#intro img:first-child {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+
+  transform: translateZ(-1px) scale(1.25);
+  z-index: -20;
+}
+
+section#intro img:not(:first-child) {
+  z-index: -30;
+}
+section#intro img:nth-child(2) {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  transform: translateZ(-1.5px) translate(-60vw, -30vh) rotate(-6deg) scale(4);
+}
+section#intro img:nth-child(3) {
+  grid-column: 3/5;
+  grid-row: 1/3;
+  transform: translateZ(-.25px) translate(20vw, -10vh) rotate(2deg) scale(2);
+}
+section#intro img:nth-child(4) {
+  grid-column: 1/3;
+  grid-row: 3/5;
+  transform: translateZ(0px) translate(-20vw, 15vh) rotate(3deg) scale(2.5);
+  z-index: -10;
+}
+section#intro img:nth-child(5) {
+  grid-column: 3/5;
+  grid-row: 3/5;
+  transform: translateZ(-3px) translate(30vw, 20vh) rotate(-12deg) scale(4);
+}
+
+
+section#work {
+  display: block;
+  height: auto;
+  position: relative;
+  z-index: 10;
+  background: #ccdadd;
+
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  grid-gap: 2rem;
+  padding: 8rem 2rem 6rem;
+}
+section#work a {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+section#work a img {
+  width: 100%;
+}
+
+section#biography {
+  height: auto;
+  background: #fcfcfc;
+
+  padding: 8rem 2rem;
+  width: calc(100vw - 2rem;);
+
+  display: grid;
+  grid-template-columns: 1fr
+}
+section#biography img {
+  width: 100%;
+}
+
+section#biography h1, section#biography h3 {
+  margin-bottom: 0;
+}
+
+ul.work-history {
+  list-style: none;
+  padding: 0;
+  color: #cdcdcd;
+}
+ul.work-history li {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  color: #000;
+}
+ul.work-history li span:nth-child(3) {
+  grid-column: 2/3;
+  color: grey;
+}
+
+
+section#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section#contact a{
+  text-decoration:none;
+  padding: 1rem 2rem;
+  background: rgb(211, 59, 83);
+  color: #fff;
+  border-radius: 2rem;
+}
