@@ -23,7 +23,7 @@ main {
   right: 0;
   top: 0;
 
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   -webkit-overflow-scrolling: touch;
 
   perspective: 2px;
