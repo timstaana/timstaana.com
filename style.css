@@ -17,7 +17,6 @@ html, body {
   scroll-behavior: smooth;
 }
 main {
-  overflow: visible;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -98,7 +97,8 @@ section#intro{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   z-index: -10;
-  height: 100vh;
+  height: 98vh;
+  min-height: 98vh;
 }
 section#intro img {
   position: relative;
@@ -149,12 +149,10 @@ section#intro img:nth-child(5) {
 
 
 section#work {
-  display: block;
   height: auto;
   z-index: 10;
   background: #ccdadd;
 
-  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
   grid-gap: 2rem;
