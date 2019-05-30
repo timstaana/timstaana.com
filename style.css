@@ -144,7 +144,6 @@ section#intro img:nth-child(5) {
 section#work {
   display: block;
   height: auto;
-  position: relative;
   z-index: 10;
   background: #ccdadd;
 
