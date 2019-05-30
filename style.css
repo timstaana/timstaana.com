@@ -64,7 +64,7 @@ nav a {
 }
 
 section {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   min-height: 100vh;
 }
 
