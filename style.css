@@ -67,7 +67,7 @@ nav a {
 
 section {
   /* scroll-snap-align: start; */
-  min-height: 98vh;
+  min-height: 100vh;
 }
 
 section:not(:first-child):target * {
