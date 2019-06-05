@@ -2,7 +2,6 @@
 * {box-sizing:border-box;}
 body,html,figure{margin:0;padding:0;}
 body {
-  max-width: 38rem;
   margin: 0 auto;
   font-size: 1.5em;
   line-height: 1.3;
