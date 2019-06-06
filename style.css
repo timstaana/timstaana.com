@@ -45,7 +45,7 @@ main {
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
-section {
+section, #bio{
   overflow-x: hidden;
   min-height: 100vh;
   padding: 1rem;
