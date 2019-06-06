@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ramabhadra');
 * {box-sizing:border-box;}
-body, html {margin:0;padding:0;}
+body, html {margin:0;padding:0;scroll-behavior:smooth;}
 body {
   margin: 0 auto;
   font-size: 1.5em;
@@ -34,8 +34,16 @@ nav ul li:first-child {flex: 1;}
 nav li {margin: .5rem;}
 nav a {text-decoration: none;color: inherit;}
 
-main {overflow-x: hidden;overflow-y: auto;}
+main {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+}
 section {
+  overflow-x: hidden;
+  
   min-height: 100vh;
   padding: 1rem;
 
@@ -43,6 +51,8 @@ section {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  scroll-snap-align: start;
 }
 
 #intro {
