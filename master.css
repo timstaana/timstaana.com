@@ -2,8 +2,8 @@
 * {box-sizing:border-box;}
 body, html {
   margin:0;padding:0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 
   scroll-behavior:smooth;
   scroll-snap-type: y proximity;
@@ -41,17 +41,6 @@ nav ul li:first-child {flex: 1;}
 nav li {margin: .5rem;}
 nav a {text-decoration: none;color: inherit;}
 
-main, .main-container {
-  height: 100vh;
-  width: 100vw;
-}
-.main-container {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior:smooth;
-}
 section{
   grid-column: 1/-1;
   overflow-x: hidden;
@@ -68,10 +57,20 @@ section{
   scroll-snap-align: start;
 }
 
+main, .main-container {
+  height: 100vh;
+  width: 100vw;
+}
 .main-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior:smooth;
+
   display: grid;
   grid-template-columns: repeat(2, 50vw);
-  grid-template-rows: repeat(4, 25vh) auto;
+  grid-template-rows: repeat(4, 25vh);
 
   -webkit-overflow-scrolling: touch;
   perspective: 2px;
@@ -129,6 +128,10 @@ section{
   font-size: 2.5rem;
 }
 
+#work {
+  overflow: visible;
+  height: 110vh;
+}
 #work h2 {
   font-size: 3rem;
 }
