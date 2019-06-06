@@ -2,9 +2,12 @@
 * {box-sizing:border-box;}
 body, html {
   margin:0;padding:0;
-  scroll-behavior:smooth;
   height: 100vh;
   width: 100vw;
+
+  scroll-behavior:smooth;
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
 }
 body {
   font-size: 1.5em;
