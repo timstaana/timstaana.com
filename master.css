@@ -121,7 +121,7 @@ main figure.hero:nth-child(5){
 }
 
 #work {
-  height: 150vh;
+  height: 100%;
 }
 #work h2 {
   font-size: 3rem;
@@ -175,5 +175,20 @@ main figure.hero:nth-child(5){
 @supports (-webkit-overflow-scrolling:touch) {
   main {
     -webkit-overflow-scrolling: touch;
+  }
+  main figure.hero:nth-child(1) {
+    transform: translate(5vw, -5vh) scale(.4);
+  }
+  main figure.hero:nth-child(2) {
+    transform: translate(-10vw, 10vh) rotate(12deg) scale(1.4);
+  }
+  main figure.hero:nth-child(3){
+    transform: translate(15vw, 25vh) rotate(-20deg) scaleX(-1) scale(1.4);
+  }
+  main figure.hero:nth-child(4){
+    transform: translate(0vw, 20vh) rotate(3deg) scale(1.5);
+  }
+  main figure.hero:nth-child(5){
+    transform: translate(0vw, 30vh) rotate(-12deg) scale(1.2);
   }
 }
