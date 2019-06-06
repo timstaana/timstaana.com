@@ -36,14 +36,17 @@ nav a {text-decoration: none;color: inherit;}
 
 main {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  
   height: 100vh;
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
 section {
   overflow-x: hidden;
-  
+  -webkit-overflow-scrolling: touch;
+
   min-height: 100vh;
   padding: 1rem;
 
