@@ -62,7 +62,7 @@ main {
 
   perspective: 2px;
 
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 
   display: grid;
   grid-template-columns: repeat(2, 50vw);
@@ -172,6 +172,8 @@ main figure.hero:nth-child(5){
   border-radius: 3rem;
 }
 
-@supports (-webkit-overflow-scrolling touch) {
-
+@supports (-webkit-overflow-scrolling:touch) {
+  main {
+    -webkit-overflow-scrolling: touch;
+  }
 }
