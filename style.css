@@ -49,7 +49,7 @@ main {
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
-section, #bio{
+section{
   overflow-x: hidden;
   min-height: 100vh;
   padding: 1rem;
