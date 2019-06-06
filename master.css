@@ -73,7 +73,7 @@ main {
 
   perspective: 2px;
 
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 
   display: grid;
   grid-template-columns: repeat(2, 50vw);
