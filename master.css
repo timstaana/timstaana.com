@@ -197,7 +197,7 @@ main figure.hero:nth-child(5) img {animation-delay:1.3s;}
   border-radius: 3rem;
 }
 
-@media (min-width: 36em) {
+@media (min-width: 36em) not (-webkit-overflow-scrolling:touch){
   section {
     width: 38rem;
     margin: 0 auto;
