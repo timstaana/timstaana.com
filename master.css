@@ -146,7 +146,7 @@ main figure.hero:nth-child(5) img {animation-delay:1.3s;}
 }
 
 #work {
-  height: 100%;
+  height: 150vh;
 }
 #work h2 {
   font-size: 3rem;
