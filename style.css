@@ -41,9 +41,22 @@ iframe {
   border-radius: .3rem;
   border: 0;
 }
-iframe {
-  width: 100%;
-  height: 56.25%;
+
+.video {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 0; height: 0; overflow: hidden;
+grid-column: 1/-1;
+}
+
+.video iframe,
+.video object,
+.video embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 figcaption {
@@ -97,13 +110,6 @@ section {
 
 .footer {
   text-align: center;
-}
-
-figure {
-	transition: transform 1s ease-in-out;
-}
-figure:hover {
-	transform: scale(1.01);
 }
 
 @media screen and (min-width: 60rem) {
