@@ -22,7 +22,8 @@ body {
 }
 
 a {
-  color: blue;
+  /* color: blue; */
+  color: #eb9e00;
   /* text-decoration-line: underline; */
   /* text-decoration-skip-ink: none; */
   /* text-decoration-style: wavy; */
@@ -86,4 +87,10 @@ section#about, footer {
 #links {
   display: flex;
   gap: .7em;
+}
+
+#links a {
+  color: #fff;
+  background-color: #eb9e00;
+  border-radius: 6px;
 }
