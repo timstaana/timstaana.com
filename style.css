@@ -88,3 +88,8 @@ section#about, footer {
   display: flex;
   gap: .7em;
 }
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
