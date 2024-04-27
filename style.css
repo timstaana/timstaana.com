@@ -16,6 +16,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.4em;
+
+  max-width: 80rem;
+  margin: auto;
 }
 
 a {
@@ -69,10 +72,6 @@ figcaption {
 
 span[itemprop="name"] {
   font-style: italic;
-}
-
-section {
-  max-width: 120rem;
 }
 
 section#portfolio {
