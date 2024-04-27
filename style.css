@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   gap: 1.4em;
 
-  max-width: 80rem;
+  max-width: 75.5rem;
   margin: auto;
 }
 
@@ -43,8 +43,8 @@ img, video {
   scroll-snap-align: start;
 
   height: 100%;
-  max-height: 30em;
-  align-self: center;
+  max-height: 33em;
+  /* align-self: center; */
 }
 
 @media only screen and (max-width: 600px) {
