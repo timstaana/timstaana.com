@@ -71,6 +71,10 @@ span[itemprop="name"] {
   font-style: italic;
 }
 
+section {
+  max-width: 120rem;
+}
+
 section#portfolio {
   display: flex;
   flex-direction: column;
