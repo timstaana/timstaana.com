@@ -88,9 +88,3 @@ section#about, footer {
   display: flex;
   gap: .7em;
 }
-
-#links a {
-  color: #fff;
-  background-color: #eb9e00;
-  border-radius: 6px;
-}
