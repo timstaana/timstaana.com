@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Tim Sta-Ana - Artist Portfolio</title>
-	<link rel="icon" sizes="192x192" href="favicon.png">
+	<link rel="icon" sizes="50x50" href="favicon.png">
 	<link rel="stylesheet" href="style.css">
 	
 	<!-- Schema.org markup -->
@@ -225,6 +225,33 @@
 	<footer>
 		(c) Tim Sta-Ana 2023 | I acknowledge the Traditional Custodians, the Wurundjeri Woi Wurrung and Boon Wurrung peoples of the Kulin Nation, of the land on which I live, work and play, and recognise their continuing connection to land, water and community. We pay respect to Elders past, present and emerging. This always was, always will be, Aboriginal land.
 	</footer>
+
+	<script>
+		var favicon_images = [
+			'./favicon/frame_00.png',
+			'./favicon/frame_01.png',
+			'./favicon/frame_02.png'
+		],
+		image_counter = 0; // To keep track of the current image
+
+		setInterval(function() {
+			// remove current favicon
+			if(document.querySelector("link[rel='icon']") !== null)
+				document.querySelector("link[rel='icon']").remove();
+			if(document.querySelector("link[rel='shortcut icon']") !== null)
+				document.querySelector("link[rel='shortcut icon']").remove();
+				
+			// add new favicon image
+			document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+			
+			// If last image then goto first image
+			// Else go to next image    
+			if(image_counter == favicon_images.length -1)
+				image_counter = 0;
+			else
+				image_counter++;
+		}, 100);
+	</script>
 
 </body>
 </html>
