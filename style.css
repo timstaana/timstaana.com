@@ -44,7 +44,7 @@ img, video {
   scroll-snap-align: start;
 
   height: 100%;
-  max-height: 33em;
+  max-width: 33em;
   /* align-self: center; */
 }
 
